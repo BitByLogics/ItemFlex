@@ -42,7 +42,7 @@ public class AnimationSettingsConfigParser implements ConfigParser<AnimationSett
 
         int loreLineLimit = section.getInt("Lore-Line-Limit");
         boolean ignoreEmptyLoreLines = section.getBoolean("Ignore-Empty-Lore-Lines");
-        int lineSpacing = section.getInt("Line-Spacing");
+        double lineSpacing = section.getDouble("Line-Spacing");
 
         double spawnDistance = section.getDouble("Spawn-Location.Distance");
         double spawnXOffset = offset.getDouble("X");

@@ -121,7 +121,7 @@ public class FlexAnimation {
             );
         }
 
-        hologram.lineSpacing(animationSettings.getLineSpacing());
+        hologram.lineSpacing((float) animationSettings.getLineSpacing());
         hologram.spawn(spawnLoc);
 
         world.spawnParticle(animationSettings.getSpawnParticle(), spawnLoc, animationSettings.getSpawnParticleCount(),

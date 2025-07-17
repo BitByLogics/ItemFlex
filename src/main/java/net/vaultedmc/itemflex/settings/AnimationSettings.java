@@ -21,7 +21,7 @@ public class AnimationSettings {
 
     private final int loreLineLimit;
     private final boolean ignoreEmptyLoreLines;
-    private final int lineSpacing;
+    private final double lineSpacing;
 
     private final double spawnDistance;
 
