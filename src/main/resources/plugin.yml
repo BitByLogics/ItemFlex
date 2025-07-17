@@ -1,5 +1,5 @@
 name: VaultedItemFlex
-version: '1.0.0'
+version: ${project.version}
 main: net.vaultedmc.itemflex.ItemFlex
 api-version: '1.21'
 authors: [ VaultedMC ]
