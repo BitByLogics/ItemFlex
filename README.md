@@ -1,13 +1,10 @@
 <div align="center">
-<img src="https://i.imgur.com/5IeP8Dt.jpeg" style="width: 20%;" alt="Icon">
 
+  <img src="https://i.imgur.com/vvjjwNW.gif" alt="ItemFlex Showcase" width="200"/>
+  
 ## Vaulted Item Flex
 
 **VaultedItemFlex** is a lightweight, configurable Spigot plugin that lets players "flex" the item they’re holding through a smooth in-world animation. Featuring holograms, particles, sounds, and PlaceholderAPI support, it’s perfect for RPG, PvP, and cosmetic-heavy servers.
-
-<p align="center">
-  <img src="https://i.imgur.com/tWdllFt.gif" alt="ItemFlex Showcase" width="600"/>
-</p>
 
 ## VaultedItemFlex
 
