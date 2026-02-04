@@ -1,5 +1,6 @@
 package net.vaultedmc.itemflex.command;
 
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import net.bitbylogic.utils.Placeholder;
 import net.bitbylogic.utils.TimeConverter;
@@ -11,7 +12,6 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.metadata.FixedMetadataValue;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +21,7 @@ public class ItemFlexCommand implements CommandExecutor {
     private final ItemFlex plugin;
 
     @Override
-    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+    public boolean onCommand(@NonNull CommandSender sender, @NonNull Command command, @NonNull String label, @NonNull String[] args) {
         if(args.length == 1 && args[0].equalsIgnoreCase("reload")) {
             if(!sender.hasPermission(plugin.getConfig().getString("Settings.Permissions.Reload", "itemflex.reload"))) {
                 sender.sendMessage(plugin.getMessageProvider().getMessage("No-Permission"));
