@@ -2,11 +2,14 @@ package net.vaultedmc.itemflex.animation;
 
 import lombok.NonNull;
 import me.clip.placeholderapi.PlaceholderAPI;
+import net.bitbylogic.utils.Placeholder;
 import net.bitbylogic.utils.hologram.Hologram;
 import net.bitbylogic.utils.hologram.HologramLine;
 import net.bitbylogic.utils.item.ItemStackUtil;
+import net.bitbylogic.utils.message.format.Formatter;
 import net.vaultedmc.itemflex.ItemFlex;
 import net.vaultedmc.itemflex.settings.AnimationSettings;
+import net.vaultedmc.itemflex.util.EnchantUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -73,6 +76,31 @@ public class FlexAnimation {
 
         for (String flexLine : animationSettings.getLines().reversed()) {
             String parsedLine = flexLine.replace("%item_name%", itemName);
+
+            if (parsedLine.equalsIgnoreCase("%item_enchants%")) {
+                if (meta.getEnchants().isEmpty()) {
+                    continue;
+                }
+
+                String enchantFormat = plugin.getConfig().getString("Settings.Enchant-Format", "&6%enchantment_name% &f%enchantment_level%");
+
+                meta.getEnchants().forEach((enchantment, integer) -> {
+                    hologram.addLine(HologramLine
+                            .of(Formatter.format(enchantFormat,
+                                    new Placeholder("%enchantment_name%", EnchantUtil.getFormattedEnchant(enchantment)),
+                                    new Placeholder("%enchantment_level%", EnchantUtil.levelToRoman(integer))
+                            ))
+                            .billboard(animationSettings.getBillboard())
+                            .backgroundColor(animationSettings.getBackgroundColor())
+                            .brightness(new Display.Brightness(animationSettings.getBlockLight(), animationSettings.getSkyLight()))
+                            .rotation(0, 0)
+                            .textShadow(animationSettings.isTextShadow())
+                            .scale((float) (item.getType().isBlock() ? animationSettings.getBlockDisplayScale() : animationSettings.getItemDisplayScale()))
+                    );
+                });
+
+                continue;
+            }
 
             if(parsedLine.equalsIgnoreCase("%item_lore%")) {
                 if(meta.getLore() == null) {

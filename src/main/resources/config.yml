@@ -46,6 +46,9 @@ Settings:
     - "&6&lFLEXING"
     - "%item_name%"
 
+  # The format of each enchantment line when %item_enchants% is used.
+  Enchant-Format: "&6%enchantment_name% &f%enchantment_level%"
+
   Spawn-Location:
     # Distance from the player's **eye location** where the hologram spawns.
     Distance: 1.5
