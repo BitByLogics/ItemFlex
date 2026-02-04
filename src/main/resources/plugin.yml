@@ -1,8 +1,8 @@
-name: VaultedItemFlex
+name: ItemFlex
 version: ${project.version}
 main: net.vaultedmc.itemflex.ItemFlex
 api-version: '1.21'
-authors: [ VaultedMC ]
+authors: [ BitByLogic ]
 commands:
   itemflex:
     description: "Flex your items with style!"
