@@ -23,7 +23,7 @@ public class ItemFlex extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
 
-        Metrics metrics = new Metrics(this, METRICS_ID);
+        new Metrics(this, METRICS_ID);
 
         Formatter.registerConfig(new File(getDataFolder(), "config.yml"));
         messageProvider = new MessageProvider(getConfig().getConfigurationSection("Messages"));
