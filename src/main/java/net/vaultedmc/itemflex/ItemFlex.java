@@ -21,6 +21,7 @@ public class ItemFlex extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        migrateSettings();
         saveDefaultConfig();
 
         new Metrics(this, METRICS_ID);
@@ -40,6 +41,27 @@ public class ItemFlex extends JavaPlugin {
         }
 
         animationSettings = AnimationSettings.getConfigParser().parseFrom(settingsSection).orElse(null);
+    }
+
+    private void migrateSettings() {
+        File oldFolder = new File(getDataFolder().getParentFile(), "VaultedItemFlex");
+        File newFolder = getDataFolder();
+
+        if (oldFolder.exists() && oldFolder.isDirectory()) {
+            if (newFolder.exists()) {
+                getLogger().warning("Found old VaultedItemFlex folder, but ItemFlex folder already exists. Migration skipped.");
+                return;
+            }
+
+            boolean success = oldFolder.renameTo(newFolder);
+
+            if (success) {
+                getLogger().info("Successfully migrated VaultedItemFlex data folder to ItemFlex!");
+                return;
+            }
+
+            getLogger().severe("Failed to rename VaultedItemFlex folder. Check file permissions.");
+        }
     }
 
 }
