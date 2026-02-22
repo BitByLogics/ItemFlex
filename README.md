@@ -2,11 +2,11 @@
 
   <img src="https://i.imgur.com/vvjjwNW.gif" alt="ItemFlex Showcase" width="200"/>
   
-## Vaulted Item Flex
+## Item Flex
 
-**VaultedItemFlex** is a lightweight, configurable Spigot plugin that lets players "flex" the item they’re holding through a smooth in-world animation. Featuring holograms, particles, sounds, and PlaceholderAPI support, it’s perfect for RPG, PvP, and cosmetic-heavy servers.
+Lightweight, configurable Spigot plugin that lets players "flex" the item they’re holding through a smooth in-world animation. Featuring holograms, particles, sounds, and PlaceholderAPI support, it’s perfect for RPG, PvP, and cosmetic-heavy servers.
 
-## VaultedItemFlex
+## Item Flex
 
 ![Issues](https://img.shields.io/github/issues-raw/VaultedMC/VaultedItemFlex)
 [![Stars](https://img.shields.io/github/stars/VaultedMC/VaultedItemFlex)](https://github.com/VaultedMC/VaultedItemFlex/stargazers)
@@ -19,7 +19,7 @@
 
 </div>
 
-## ✨ Features
+## Features
 
 - Display the held item with floating holograms and spinning animations
 - Fully configurable: lines, positioning, particles, sounds, durations, and more
@@ -30,7 +30,7 @@
 
 ---
 
-## 🔧 Commands & Permissions
+## Commands & Permissions
 
 ### `/itemflex`
 Triggers the flex animation for the item in your main hand.
@@ -45,7 +45,7 @@ Triggers the flex animation for the item in your main hand.
 
 ---
 
-## 🛠 Configuration
+## Configuration
 
 All plugin behavior can be tuned via `config.yml`.
 
@@ -163,33 +163,11 @@ Messages:
 
 ---
 
-## 📦 Installation
+## Installation
 
-1. 📦 Download the plugin: [Modrinth](https://modrinth.com/plugin/vaulted-item-flex)
+1. Download the plugin: [Modrinth](https://modrinth.com/plugin/vaulted-item-flex)
 2. Place it in your server's `/plugins` folder
 3. Restart the server
 4. (Optional) Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) for placeholder support
-
----
-
-## 🧩 Compatibility
-
-- Minecraft: **1.20+**
-- Server: **Paper / Purpur** recommended
-- Dependencies: [PlaceholderAPI (optional)](https://www.spigotmc.org/resources/placeholderapi.6245/)
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License.  
-See the [LICENSE](./LICENSE) file for details.
-
----
-
-## ❤️ Support & Feedback
-
-Need help? Found a bug?  
-Feel free to [open an issue](https://github.com/VaultedMC/VaultedItemFlex/issues) or join our Discord!
 
 ---
