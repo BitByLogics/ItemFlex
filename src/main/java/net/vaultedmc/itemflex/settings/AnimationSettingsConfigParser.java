@@ -8,13 +8,22 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Display;
 import org.bukkit.entity.ItemDisplay;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class AnimationSettingsConfigParser implements ConfigParser<AnimationSettings> {
 
     @Override
     public Optional<AnimationSettings> parseFrom(@NonNull ConfigurationSection section) {
+        Map<String, String> flexConditions = new HashMap<>();
+
+        section.getStringList("Flex-Conditions").forEach(flexCondition -> {
+            String[] splitCondition = flexCondition.split(",", 2);
+            flexConditions.put(splitCondition[0], splitCondition.length > 1 ? splitCondition[1] : "");
+        });
+
         ConfigurationSection spawnLoc = section.getConfigurationSection("Spawn-Location");
         ConfigurationSection offset = spawnLoc != null ? spawnLoc.getConfigurationSection("Offset") : null;
         ConfigurationSection itemOffset = spawnLoc != null ? spawnLoc.getConfigurationSection("Item-Offset") : null;
@@ -111,6 +120,7 @@ public class AnimationSettingsConfigParser implements ConfigParser<AnimationSett
         int animationDuration = section.getInt("Animation-Duration");
 
         return Optional.of(new AnimationSettings(
+                flexConditions,
                 lines,
                 loreLineLimit, ignoreEmptyLoreLines,
                 lineSpacing,

@@ -10,12 +10,15 @@ import org.bukkit.entity.ItemDisplay;
 import org.bukkit.util.Vector;
 
 import java.util.List;
+import java.util.Map;
 
 @Getter
 @RequiredArgsConstructor
 public class AnimationSettings {
 
     private static final AnimationSettingsConfigParser CONFIG_PARSER = new AnimationSettingsConfigParser();
+
+    private final Map<String, String> flexConditions;
 
     private final List<String> lines;
 

@@ -21,6 +21,13 @@ Settings:
   #   "2h 30m" = 2 hours and 30 minutes
   Use-Cooldown: "1m"
 
+  # Conditions that must be met for the item to be flexed.
+  # Available Conditions:
+  #  pdc: Item must have the specified key in its PersistentDataContainer.
+  #   - Format: "pdc,<key>,<type>,<value>"
+  #   - Example: "pdc,itemflex:test,STRING,test"
+  Flex-Conditions: []
+
   # Maximum number of lore lines shown from the %item_lore% placeholder.
   # If the item has more lore lines than this value, the rest will be skipped.
   # Set to 0 to disable lore entirely.
@@ -169,6 +176,9 @@ Settings:
 # All plugin messages can be customized below.
 # Supports PlaceholderAPI placeholders and Minecraft hex colors (e.g. #A020F0).
 Messages:
+  # Shown when the player tries to flex an item that does not meet the flex conditions.
+  Cannot-Flex: "#FF5555You cannot flex that item!"
+
   # Shown when a player lacks the required permission.
   No-Permission: "#FF5555You do not have permission to use this."
 

@@ -7,12 +7,15 @@ import net.bitbylogic.utils.TimeConverter;
 import net.bitbylogic.utils.cooldown.CooldownUtil;
 import net.vaultedmc.itemflex.ItemFlex;
 import net.vaultedmc.itemflex.animation.FlexAnimation;
+import net.vaultedmc.itemflex.condition.ConditionContext;
+import net.vaultedmc.itemflex.condition.FlexCondition;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.metadata.FixedMetadataValue;
 
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @RequiredArgsConstructor
@@ -50,6 +53,19 @@ public class ItemFlexCommand implements CommandExecutor {
         if(player.getInventory().getItemInMainHand().getType().isAir()) {
             sender.sendMessage(plugin.getMessageProvider().getMessage("Must-Hold-Item"));
             return true;
+        }
+
+        for (Map.Entry<String, String> conditionEntry : plugin.getAnimationSettings().getFlexConditions().entrySet()) {
+            FlexCondition condition = plugin.getConditionManager().getCondition(conditionEntry.getKey()).orElse(null);
+
+            if (condition == null) {
+                continue;
+            }
+
+            if(!condition.getCondition().apply(new ConditionContext(player, player.getInventory().getItemInMainHand(), conditionEntry.getValue()))) {
+                sender.sendMessage(plugin.getMessageProvider().getMessage("Cannot-Flex"));
+                return true;
+            }
         }
 
         if(CooldownUtil.hasCooldown("itemflex", player.getUniqueId())) {
