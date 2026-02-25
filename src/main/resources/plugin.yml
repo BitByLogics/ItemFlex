@@ -3,6 +3,7 @@ version: ${project.version}
 main: net.vaultedmc.itemflex.ItemFlex
 api-version: '1.21'
 authors: [ BitByLogic ]
+softdepend: [ AdvancedEnchantments ]
 commands:
   itemflex:
     description: "Flex your items with style!"

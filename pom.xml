@@ -141,5 +141,13 @@
             <version>3.0.2</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>net.advancedplugins</groupId>
+            <artifactId>AdvancedEnchantments</artifactId>
+            <version>8.7.4</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/AdvancedEnchantments-8.7.4.jar</systemPath>
+        </dependency>
     </dependencies>
 </project>

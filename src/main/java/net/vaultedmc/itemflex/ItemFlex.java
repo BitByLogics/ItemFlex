@@ -5,6 +5,7 @@ import net.bitbylogic.utils.message.config.MessageProvider;
 import net.bitbylogic.utils.message.format.Formatter;
 import net.vaultedmc.itemflex.command.ItemFlexCommand;
 import net.vaultedmc.itemflex.condition.ConditionManager;
+import net.vaultedmc.itemflex.provider.LineProviderManager;
 import net.vaultedmc.itemflex.settings.AnimationSettings;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.configuration.ConfigurationSection;
@@ -17,20 +18,26 @@ public class ItemFlex extends JavaPlugin {
 
     private static final int METRICS_ID = 26440;
 
+    @Getter
+    private static ItemFlex instance;
+
     private MessageProvider messageProvider;
     private ConditionManager conditionManager;
+    private LineProviderManager lineProviderManager;
     private AnimationSettings animationSettings;
 
     @Override
     public void onEnable() {
         migrateSettings();
         saveDefaultConfig();
+        instance = this;
 
         new Metrics(this, METRICS_ID);
 
         Formatter.registerConfig(new File(getDataFolder(), "config.yml"));
         messageProvider = new MessageProvider(getConfig().getConfigurationSection("Messages"));
         conditionManager = new ConditionManager();
+        lineProviderManager = new LineProviderManager();
 
         loadSettings();
 

@@ -2,29 +2,26 @@ package net.vaultedmc.itemflex.animation;
 
 import lombok.NonNull;
 import me.clip.placeholderapi.PlaceholderAPI;
-import net.bitbylogic.utils.Placeholder;
 import net.bitbylogic.utils.hologram.Hologram;
 import net.bitbylogic.utils.hologram.HologramLine;
-import net.bitbylogic.utils.item.ItemStackUtil;
-import net.bitbylogic.utils.message.format.Formatter;
 import net.vaultedmc.itemflex.ItemFlex;
+import net.vaultedmc.itemflex.provider.LineProviderManager;
+import net.vaultedmc.itemflex.provider.PlaceholderLineProvider;
 import net.vaultedmc.itemflex.settings.AnimationSettings;
-import net.vaultedmc.itemflex.util.EnchantUtil;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Display;
 import org.bukkit.entity.ItemDisplay;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Transformation;
 import org.bukkit.util.Vector;
 import org.joml.Quaternionf;
 import org.joml.Vector3f;
 
+import java.util.List;
 import java.util.Optional;
 
 public class FlexAnimation {
@@ -69,27 +66,32 @@ public class FlexAnimation {
                 .translation(animationSettings.getItemSpawnOffset().toVector3f())
         );
 
-        int loreLineLimits = animationSettings.getLoreLineLimit();
-        ItemMeta meta = item.getItemMeta();
-
-        String itemName = meta.hasDisplayName() ? meta.getDisplayName() : ItemStackUtil.getVanillaName(item);
+        LineProviderManager lineProviderManager = plugin.getLineProviderManager();
 
         for (String flexLine : animationSettings.getLines().reversed()) {
-            String parsedLine = flexLine.replace("%item_name%", itemName);
+            boolean addLine = true;
 
-            if (parsedLine.equalsIgnoreCase("%item_enchants%")) {
-                if (meta.getEnchants().isEmpty()) {
+            for (PlaceholderLineProvider lineProvider : lineProviderManager.getLineProviders()) {
+                if (!flexLine.contains(lineProvider.getPlaceholder())) {
                     continue;
                 }
 
-                String enchantFormat = plugin.getConfig().getString("Settings.Enchant-Format", "&6%enchantment_name% &f%enchantment_level%");
+                List<String> lines = lineProvider.provide(player, item);
 
-                meta.getEnchants().forEach((enchantment, integer) -> {
+                if (lineProvider.getType() == PlaceholderLineProvider.Type.REPLACE) {
+                    flexLine = flexLine.replace(lineProvider.getPlaceholder(), lines.isEmpty() ? "" : lines.getFirst());
+                    continue;
+                }
+
+                addLine = false;
+
+                for (String line : lines) {
+                    if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
+                        line = PlaceholderAPI.setPlaceholders(player, line);
+                    }
+
                     hologram.addLine(HologramLine
-                            .of(Formatter.format(enchantFormat,
-                                    new Placeholder("%enchantment_name%", EnchantUtil.getFormattedEnchant(enchantment)),
-                                    new Placeholder("%enchantment_level%", EnchantUtil.levelToRoman(integer))
-                            ))
+                            .of(line)
                             .billboard(animationSettings.getBillboard())
                             .backgroundColor(animationSettings.getBackgroundColor())
                             .brightness(new Display.Brightness(animationSettings.getBlockLight(), animationSettings.getSkyLight()))
@@ -97,49 +99,19 @@ public class FlexAnimation {
                             .textShadow(animationSettings.isTextShadow())
                             .scale((float) (item.getType().isBlock() ? animationSettings.getBlockDisplayScale() : animationSettings.getItemDisplayScale()))
                     );
-                });
-
-                continue;
+                }
             }
 
-            if(parsedLine.equalsIgnoreCase("%item_lore%")) {
-                if(meta.getLore() == null) {
-                    continue;
-                }
-
-                int lines = 0;
-
-                for (String loreLine : meta.getLore().reversed()) {
-                    if(animationSettings.isIgnoreEmptyLoreLines() && ChatColor.stripColor(loreLine).isEmpty()) {
-                        continue;
-                    }
-
-                    lines++;
-
-                    if(lines > loreLineLimits) {
-                        break;
-                    }
-
-                    hologram.addLine(HologramLine
-                            .of(loreLine)
-                            .billboard(animationSettings.getBillboard())
-                            .backgroundColor(animationSettings.getBackgroundColor())
-                            .brightness(new Display.Brightness(animationSettings.getBlockLight(), animationSettings.getSkyLight()))
-                            .rotation(0, 0)
-                            .textShadow(animationSettings.isTextShadow())
-                            .scale((float) (item.getType().isBlock() ? animationSettings.getBlockDisplayScale() : animationSettings.getItemDisplayScale()))
-                    );
-                }
-
+            if (!addLine) {
                 continue;
             }
 
             if (Bukkit.getPluginManager().isPluginEnabled("PlaceholderAPI")) {
-                parsedLine = PlaceholderAPI.setPlaceholders(player, parsedLine);
+                flexLine = PlaceholderAPI.setPlaceholders(player, flexLine);
             }
 
             hologram.addLine(HologramLine
-                    .of(parsedLine)
+                    .of(flexLine)
                     .billboard(animationSettings.getBillboard())
                     .backgroundColor(animationSettings.getBackgroundColor())
                     .brightness(new Display.Brightness(animationSettings.getBlockLight(), animationSettings.getSkyLight()))
