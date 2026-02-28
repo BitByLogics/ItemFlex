@@ -165,7 +165,7 @@ Messages:
 
 ## Installation
 
-1. Download the plugin: [Modrinth](https://modrinth.com/plugin/vaulted-item-flex)
+1. Download the plugin: [Modrinth](https://modrinth.com/plugin/item-flex)
 2. Place it in your server's `/plugins` folder
 3. Restart the server
 4. (Optional) Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) for placeholder support
