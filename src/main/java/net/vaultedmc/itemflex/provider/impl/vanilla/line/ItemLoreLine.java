@@ -30,6 +30,10 @@ public class ItemLoreLine implements PlaceholderLineProvider {
         int loreLineLimits = plugin.getAnimationSettings().getLoreLineLimit();
         int lines = 0;
 
+        if (itemStack.getItemMeta() == null || itemStack.getItemMeta().hasLore() || itemStack.getItemMeta().getLore() == null) {
+            return lore;
+        }
+
         for (String loreLine : itemStack.getItemMeta().getLore().reversed()) {
             if(plugin.getAnimationSettings().isIgnoreEmptyLoreLines() && ChatColor.stripColor(loreLine).isEmpty()) {
                 continue;
