@@ -8,8 +8,8 @@ Lightweight, configurable Spigot plugin that lets players "flex" the item theyâ€
 
 ## Item Flex
 
-![Issues](https://img.shields.io/github/issues-raw/VaultedMC/VaultedItemFlex)
-[![Stars](https://img.shields.io/github/stars/VaultedMC/VaultedItemFlex)](https://github.com/VaultedMC/VaultedItemFlex/stargazers)
+![Issues](https://img.shields.io/github/issues-raw/BitByLogics/ItemFlex)
+[![Stars](https://img.shields.io/github/stars/BitByLogics/ItemFlex)](https://github.com/VaultedMC/VaultedItemFlex/stargazers)
 [![Chat](https://img.shields.io/discord/1364023569247506583?logo=discord&logoColor=white)](https://discord.gg/syngw2UQUd)
 
 <a href="#"><img src="https://raw.githubusercontent.com/intergrav/devins-badges/v2/assets/compact/supported/spigot_46h.png" height="35"></a>
@@ -165,7 +165,7 @@ Messages:
 
 ## Installation
 
-1. Download the plugin: [Modrinth](https://modrinth.com/plugin/vaulted-item-flex)
+1. Download the plugin: [Modrinth](https://modrinth.com/plugin/item-flex)
 2. Place it in your server's `/plugins` folder
 3. Restart the server
 4. (Optional) Install [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) for placeholder support
