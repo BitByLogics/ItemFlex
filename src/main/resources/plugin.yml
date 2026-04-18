@@ -6,6 +6,6 @@ authors: [ BitByLogic ]
 softdepend: [ AdvancedEnchantments ]
 commands:
   itemflex:
+    aliases: [ flex ]
     description: "Flex your items with style!"
     usage: "Usage: /itemflex"
-
