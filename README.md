@@ -1,12 +1,6 @@
 <div align="center">
 
-  <img src="https://i.imgur.com/vvjjwNW.gif" alt="ItemFlex Showcase" width="200"/>
-  
-## Item Flex
-
-Animated item holograms for your server. Players "flex" the item they’re holding through a smooth in-world animation that you design yourself in a built-in web editor with a live preview and timeline. Holograms, particles, sounds and PlaceholderAPI support make it a fit for RPG, PvP and cosmetic-heavy servers.
-
-Works on Spigot, Paper, Purpur and Folia (1.21+).
+  <img src="https://myimgs.org/storage/images/72555/itemflex_cover.png" alt="ItemFlex Showcase"/>
 
 ## Item Flex
 
