@@ -6,7 +6,7 @@
 
     <groupId>net.vaultedmc</groupId>
     <artifactId>ItemFlex</artifactId>
-    <version>1.0.5</version>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
 
     <name>ItemFlex</name>
@@ -73,6 +73,10 @@
                             <shadedPattern>net.vaultedmc.itemflex.lib.bitsutils</shadedPattern>
                         </relocation>
                         <relocation>
+                            <pattern>com.tcoded.folialib</pattern>
+                            <shadedPattern>net.vaultedmc.itemflex.lib.folialib</shadedPattern>
+                        </relocation>
+                        <relocation>
                             <pattern>org.bstats</pattern>
                             <shadedPattern>net.vaultedmc.itemflex.lib.bstats</shadedPattern>
                         </relocation>
@@ -93,6 +97,12 @@
         <repository>
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+
+        <!-- FoliaLib -->
+        <repository>
+            <id>tcoded-releases</id>
+            <url>https://repo.tcoded.com/releases</url>
         </repository>
 
         <!-- PlaceholderAPI -->
@@ -116,6 +126,14 @@
             <groupId>net.bitbylogic</groupId>
             <artifactId>bits-utils-bukkit</artifactId>
             <version>1.0.0</version>
+        </dependency>
+
+        <!-- FoliaLib -->
+        <dependency>
+            <groupId>com.tcoded</groupId>
+            <artifactId>FoliaLib</artifactId>
+            <version>0.5.1</version>
+            <scope>compile</scope>
         </dependency>
 
         <!-- PlaceholderAPI -->

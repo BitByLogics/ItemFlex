@@ -1,0 +1,75 @@
+{
+  "permission": "",
+  "priority": 0,
+  "duration": 93,
+  "spawn": {
+    "distance": 1.5,
+    "offset": { "x": 0.0, "y": 1.5, "z": 0.0 },
+    "itemOffset": { "x": 0.0, "y": -0.17, "z": 0.0 }
+  },
+  "item": {
+    "displayTransform": "GUI",
+    "itemScale": 0.75,
+    "blockScale": 0.5
+  },
+  "text": {
+    "lines": [ "&6&lFLEXING", "%item_name%" ],
+    "lineSpacing": 0.17,
+    "billboard": "VERTICAL",
+    "background": { "opacity": 0, "red": 0, "green": 0, "blue": 0 },
+    "blockLight": 15,
+    "skyLight": 15,
+    "shadow": true
+  },
+  "tracks": [
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "SCALE",
+      "keyframes": [
+        { "tick": 0, "value": 0.0133, "easing": "LINEAR" },
+        { "tick": 13, "value": 1.0, "easing": "LINEAR" },
+        { "tick": 80, "value": 1.0, "easing": "LINEAR" },
+        { "tick": 93, "value": 0.0, "easing": "LINEAR" }
+      ]
+    },
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "ROTATION_Y",
+      "keyframes": [
+        { "tick": 0, "value": 0.0, "easing": "LINEAR" },
+        { "tick": 93, "value": 651.0, "easing": "LINEAR" }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "PARTICLE", "tick": 0, "every": 0, "until": 0,
+      "particle": "GLOW", "count": 20,
+      "offsetX": 0.1, "offsetY": 0.2, "offsetZ": 0.1, "speed": 0.01, "height": 0.0
+    },
+    {
+      "type": "SOUND", "tick": 0, "every": 0, "until": 0,
+      "sound": "minecraft:entity.evoker.cast_spell", "volume": 1.2, "pitch": 1.5
+    },
+    {
+      "type": "PARTICLE", "tick": 0, "every": 10, "until": 0,
+      "particle": "ENCHANT", "count": 3,
+      "offsetX": 0.1, "offsetY": 0.1, "offsetZ": 0.1, "speed": 0.0, "height": 0.5
+    },
+    {
+      "type": "SOUND", "tick": 0, "every": 20, "until": 0,
+      "sound": "minecraft:block.beacon.ambient", "volume": 0.3, "pitch": 1.2
+    },
+    {
+      "type": "PARTICLE", "tick": 93, "every": 0, "until": 0,
+      "particle": "FIREWORK", "count": 15,
+      "offsetX": 0.2, "offsetY": 0.2, "offsetZ": 0.2, "speed": 0.05, "height": 0.0
+    },
+    {
+      "type": "SOUND", "tick": 93, "every": 0, "until": 0,
+      "sound": "minecraft:block.amethyst_block.break", "volume": 0.8, "pitch": 1.7
+    }
+  ]
+}

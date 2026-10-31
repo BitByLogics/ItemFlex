@@ -1,0 +1,585 @@
+{
+  "permission": "itemflex.animation.arcane",
+  "priority": 10,
+  "duration": 140,
+  "spawn": {
+    "distance": 1.5,
+    "offset": {
+      "x": 0.0,
+      "y": 1.5,
+      "z": 0.0
+    },
+    "itemOffset": {
+      "x": 0.0,
+      "y": -0.17,
+      "z": 0.0
+    }
+  },
+  "item": {
+    "displayTransform": "GUI",
+    "itemScale": 0.75,
+    "blockScale": 0.5
+  },
+  "text": {
+    "lines": [
+      "&5&l\u00bb &d&lARCANE &5&l\u00ab",
+      "%item_name%"
+    ],
+    "lineSpacing": 0.17,
+    "billboard": "VERTICAL",
+    "background": {
+      "opacity": 0,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "blockLight": 15,
+    "skyLight": 15,
+    "shadow": true
+  },
+  "tracks": [
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "OFFSET_Y",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": -0.9,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 40,
+          "value": 0.0,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 68,
+          "value": 0.1,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 100,
+          "value": 0.0,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 120,
+          "value": 0.1,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 140,
+          "value": 0.9,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "SCALE",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 0.0,
+          "easing": "BACK_OUT"
+        },
+        {
+          "tick": 30,
+          "value": 0.9,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 40,
+          "value": 0.9,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 43,
+          "value": 1.45,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 52,
+          "value": 1.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 122,
+          "value": 1.0,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 140,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "ROTATION_Y",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 0.0,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 40,
+          "value": 1260.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 122,
+          "value": 1620.0,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 140,
+          "value": 2340.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "ROTATION_Z",
+      "keyframes": [
+        {
+          "tick": 52,
+          "value": 0.0,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 80,
+          "value": 9.0,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 110,
+          "value": -9.0,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 135,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ROOT",
+      "line": -1,
+      "property": "FORWARD",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 0.5,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 40,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "TEXT",
+      "line": -1,
+      "property": "OPACITY",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 0.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 38,
+          "value": 0.0,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 50,
+          "value": 1.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 124,
+          "value": 1.0,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 140,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "TEXT",
+      "line": -1,
+      "property": "SCALE",
+      "keyframes": [
+        {
+          "tick": 38,
+          "value": 0.4,
+          "easing": "BACK_OUT"
+        },
+        {
+          "tick": 54,
+          "value": 1.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "TEXT",
+      "line": -1,
+      "property": "OFFSET_Y",
+      "keyframes": [
+        {
+          "tick": 38,
+          "value": -0.2,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 54,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "SOUND",
+      "tick": 0,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.enchantment_table.use",
+      "volume": 0.9,
+      "pitch": 0.8
+    },
+    {
+      "type": "SOUND",
+      "tick": 0,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.evoker.prepare_summon",
+      "volume": 0.45,
+      "pitch": 1.5
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 0,
+      "every": 1,
+      "until": 38,
+      "particle": "PORTAL",
+      "count": 10,
+      "offsetX": 0.9,
+      "offsetY": 0.9,
+      "offsetZ": 0.9,
+      "speed": 0.4,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 0,
+      "every": 2,
+      "until": 38,
+      "particle": "ENCHANT",
+      "count": 6,
+      "offsetX": 0.6,
+      "offsetY": 0.6,
+      "offsetZ": 0.6,
+      "speed": 0.3,
+      "height": 0.2
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 6,
+      "every": 4,
+      "until": 38,
+      "particle": "END_ROD",
+      "count": 1,
+      "offsetX": 0.4,
+      "offsetY": 0.4,
+      "offsetZ": 0.4,
+      "speed": 0.03,
+      "height": 0.1
+    },
+    {
+      "type": "SOUND",
+      "tick": 4,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.note_block.bell",
+      "volume": 0.55,
+      "pitch": 0.6
+    },
+    {
+      "type": "SOUND",
+      "tick": 12,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.note_block.bell",
+      "volume": 0.55,
+      "pitch": 0.8
+    },
+    {
+      "type": "SOUND",
+      "tick": 20,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.note_block.bell",
+      "volume": 0.55,
+      "pitch": 1.0
+    },
+    {
+      "type": "SOUND",
+      "tick": 28,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.note_block.bell",
+      "volume": 0.55,
+      "pitch": 1.25
+    },
+    {
+      "type": "SOUND",
+      "tick": 35,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.note_block.bell",
+      "volume": 0.55,
+      "pitch": 1.6
+    },
+    {
+      "type": "SOUND",
+      "tick": 40,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.player.levelup",
+      "volume": 0.7,
+      "pitch": 1.25
+    },
+    {
+      "type": "SOUND",
+      "tick": 40,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.beacon.activate",
+      "volume": 0.6,
+      "pitch": 1.5
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 40,
+      "every": 0,
+      "until": 0,
+      "particle": "FIREWORK",
+      "count": 18,
+      "offsetX": 0.05,
+      "offsetY": 0.05,
+      "offsetZ": 0.05,
+      "speed": 0.16,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 40,
+      "every": 0,
+      "until": 0,
+      "particle": "TOTEM_OF_UNDYING",
+      "count": 14,
+      "offsetX": 0.1,
+      "offsetY": 0.1,
+      "offsetZ": 0.1,
+      "speed": 0.35,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 40,
+      "every": 0,
+      "until": 0,
+      "particle": "END_ROD",
+      "count": 8,
+      "offsetX": 0.05,
+      "offsetY": 0.05,
+      "offsetZ": 0.05,
+      "speed": 0.2,
+      "height": 0.0
+    },
+    {
+      "type": "TEXT",
+      "tick": 38,
+      "every": 0,
+      "until": 0,
+      "line": 0,
+      "text": "&f&l\u00bb ARCANE \u00ab"
+    },
+    {
+      "type": "TEXT",
+      "tick": 44,
+      "every": 0,
+      "until": 0,
+      "line": 0,
+      "text": "&5&l\u00bb &d&lARCANE &5&l\u00ab"
+    },
+    {
+      "type": "MESSAGE",
+      "tick": 40,
+      "every": 0,
+      "until": 0,
+      "message": "&5&l\u00bb &7Arcane power surges through your &f%item_name%&7."
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 50,
+      "every": 2,
+      "until": 120,
+      "particle": "ENCHANT",
+      "count": 5,
+      "offsetX": 0.55,
+      "offsetY": 0.55,
+      "offsetZ": 0.55,
+      "speed": 0.3,
+      "height": 0.1
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 52,
+      "every": 6,
+      "until": 120,
+      "particle": "END_ROD",
+      "count": 1,
+      "offsetX": 0.45,
+      "offsetY": 0.45,
+      "offsetZ": 0.45,
+      "speed": 0.02,
+      "height": 0.1
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 52,
+      "every": 4,
+      "until": 120,
+      "particle": "PORTAL",
+      "count": 3,
+      "offsetX": 0.7,
+      "offsetY": 0.6,
+      "offsetZ": 0.7,
+      "speed": 0.3,
+      "height": 0.0
+    },
+    {
+      "type": "SOUND",
+      "tick": 50,
+      "every": 24,
+      "until": 120,
+      "sound": "minecraft:block.amethyst_block.chime",
+      "volume": 0.5,
+      "pitch": 1.4
+    },
+    {
+      "type": "TEXT",
+      "tick": 70,
+      "every": 0,
+      "until": 0,
+      "line": 0,
+      "text": "&d&l\u00bb &b&lARCANE &d&l\u00ab"
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 70,
+      "every": 0,
+      "until": 0,
+      "particle": "END_ROD",
+      "count": 8,
+      "offsetX": 0.05,
+      "offsetY": 0.05,
+      "offsetZ": 0.05,
+      "speed": 0.1,
+      "height": 0.0
+    },
+    {
+      "type": "TEXT",
+      "tick": 100,
+      "every": 0,
+      "until": 0,
+      "line": 0,
+      "text": "&b&l\u00bb &f&lARCANE &b&l\u00ab"
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 100,
+      "every": 0,
+      "until": 0,
+      "particle": "FIREWORK",
+      "count": 10,
+      "offsetX": 0.05,
+      "offsetY": 0.05,
+      "offsetZ": 0.05,
+      "speed": 0.1,
+      "height": 0.0
+    },
+    {
+      "type": "SOUND",
+      "tick": 100,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.amethyst_cluster.break",
+      "volume": 0.5,
+      "pitch": 1.5
+    },
+    {
+      "type": "SOUND",
+      "tick": 124,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.enderman.teleport",
+      "volume": 0.6,
+      "pitch": 1.6
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 124,
+      "every": 1,
+      "until": 140,
+      "particle": "PORTAL",
+      "count": 8,
+      "offsetX": 0.5,
+      "offsetY": 0.5,
+      "offsetZ": 0.5,
+      "speed": 0.8,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 140,
+      "every": 0,
+      "until": 0,
+      "particle": "TOTEM_OF_UNDYING",
+      "count": 25,
+      "offsetX": 0.1,
+      "offsetY": 0.1,
+      "offsetZ": 0.1,
+      "speed": 0.3,
+      "height": 0.0
+    },
+    {
+      "type": "SOUND",
+      "tick": 140,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.firework_rocket.twinkle",
+      "volume": 0.6,
+      "pitch": 1.2
+    }
+  ]
+}

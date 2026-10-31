@@ -1,0 +1,642 @@
+{
+  "permission": "itemflex.animation.inferno",
+  "priority": 10,
+  "duration": 110,
+  "spawn": {
+    "distance": 1.5,
+    "offset": {
+      "x": 0.0,
+      "y": 1.5,
+      "z": 0.0
+    },
+    "itemOffset": {
+      "x": 0.0,
+      "y": -0.17,
+      "z": 0.0
+    }
+  },
+  "item": {
+    "displayTransform": "GUI",
+    "itemScale": 0.75,
+    "blockScale": 0.5
+  },
+  "text": {
+    "lines": [
+      "&6&l\u00bb &c&lBLAZING &6&l\u00ab",
+      "%item_name%"
+    ],
+    "lineSpacing": 0.17,
+    "billboard": "VERTICAL",
+    "background": {
+      "opacity": 0,
+      "red": 0,
+      "green": 0,
+      "blue": 0
+    },
+    "blockLight": 15,
+    "skyLight": 15,
+    "shadow": true
+  },
+  "tracks": [
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "OFFSET_Y",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 2.2,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 14,
+          "value": 0.0,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 18,
+          "value": 0.28,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 22,
+          "value": 0.0,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 24,
+          "value": 0.07,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 26,
+          "value": 0.0,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 44,
+          "value": 0.06,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 69,
+          "value": 0.0,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 94,
+          "value": 0.06,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "SCALE",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 0.35,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 14,
+          "value": 0.9,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 17,
+          "value": 1.5,
+          "easing": "EASE_IN_OUT"
+        },
+        {
+          "tick": 24,
+          "value": 1.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 96,
+          "value": 1.0,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 110,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "ROTATION_Y",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 720.0,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 14,
+          "value": 0.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 110,
+          "value": 360.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "ROTATION_X",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 40.0,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 14,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ITEM",
+      "line": -1,
+      "property": "ROTATION_Z",
+      "keyframes": [
+        {
+          "tick": 14,
+          "value": 0.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 15,
+          "value": 16.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 16,
+          "value": -14.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 17,
+          "value": 12.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 18,
+          "value": -10.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 19,
+          "value": 8.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 20,
+          "value": -6.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 21,
+          "value": 4.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 22,
+          "value": -2.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 23,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "ROOT",
+      "line": -1,
+      "property": "OFFSET_X",
+      "keyframes": [
+        {
+          "tick": 14,
+          "value": 0.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 15,
+          "value": 0.07,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 16,
+          "value": -0.061,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 17,
+          "value": 0.053,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 18,
+          "value": -0.044,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 19,
+          "value": 0.035,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 20,
+          "value": -0.026,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 21,
+          "value": 0.018,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 22,
+          "value": -0.009,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 23,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "TEXT",
+      "line": -1,
+      "property": "OPACITY",
+      "keyframes": [
+        {
+          "tick": 0,
+          "value": 0.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 16,
+          "value": 0.0,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 22,
+          "value": 1.0,
+          "easing": "LINEAR"
+        },
+        {
+          "tick": 96,
+          "value": 1.0,
+          "easing": "EASE_IN"
+        },
+        {
+          "tick": 110,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "TEXT",
+      "line": -1,
+      "property": "SCALE",
+      "keyframes": [
+        {
+          "tick": 16,
+          "value": 2.2,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 26,
+          "value": 1.0,
+          "easing": "LINEAR"
+        }
+      ]
+    },
+    {
+      "target": "TEXT",
+      "line": -1,
+      "property": "OFFSET_Y",
+      "keyframes": [
+        {
+          "tick": 16,
+          "value": 0.25,
+          "easing": "EASE_OUT"
+        },
+        {
+          "tick": 26,
+          "value": 0.0,
+          "easing": "LINEAR"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "type": "SOUND",
+      "tick": 0,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:item.firecharge.use",
+      "volume": 0.9,
+      "pitch": 0.7
+    },
+    {
+      "type": "SOUND",
+      "tick": 2,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.blaze.shoot",
+      "volume": 0.6,
+      "pitch": 0.6
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 0,
+      "every": 1,
+      "until": 13,
+      "particle": "FLAME",
+      "count": 8,
+      "offsetX": 0.15,
+      "offsetY": 0.6,
+      "offsetZ": 0.15,
+      "speed": 0.02,
+      "height": 0.9
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 0,
+      "every": 1,
+      "until": 13,
+      "particle": "SMOKE",
+      "count": 4,
+      "offsetX": 0.2,
+      "offsetY": 0.7,
+      "offsetZ": 0.2,
+      "speed": 0.01,
+      "height": 0.9
+    },
+    {
+      "type": "SOUND",
+      "tick": 14,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.generic.explode",
+      "volume": 0.9,
+      "pitch": 1.1
+    },
+    {
+      "type": "SOUND",
+      "tick": 14,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.anvil.land",
+      "volume": 0.5,
+      "pitch": 0.6
+    },
+    {
+      "type": "SOUND",
+      "tick": 15,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.blaze.shoot",
+      "volume": 0.8,
+      "pitch": 0.9
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 14,
+      "every": 0,
+      "until": 0,
+      "particle": "FLAME",
+      "count": 40,
+      "offsetX": 0.1,
+      "offsetY": 0.1,
+      "offsetZ": 0.1,
+      "speed": 0.22,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 14,
+      "every": 0,
+      "until": 0,
+      "particle": "LAVA",
+      "count": 14,
+      "offsetX": 0.5,
+      "offsetY": 0.2,
+      "offsetZ": 0.5,
+      "speed": 0.0,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 14,
+      "every": 0,
+      "until": 0,
+      "particle": "LARGE_SMOKE",
+      "count": 10,
+      "offsetX": 0.4,
+      "offsetY": 0.2,
+      "offsetZ": 0.4,
+      "speed": 0.06,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 16,
+      "every": 0,
+      "until": 0,
+      "particle": "FLAME",
+      "count": 22,
+      "offsetX": 0.3,
+      "offsetY": 0.05,
+      "offsetZ": 0.3,
+      "speed": 0.14,
+      "height": -0.2
+    },
+    {
+      "type": "TEXT",
+      "tick": 16,
+      "every": 0,
+      "until": 0,
+      "line": 0,
+      "text": "&6&l\u00bb &c&lBLAZING &6&l\u00ab"
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 26,
+      "every": 3,
+      "until": 100,
+      "particle": "FLAME",
+      "count": 3,
+      "offsetX": 0.35,
+      "offsetY": 0.35,
+      "offsetZ": 0.35,
+      "speed": 0.02,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 26,
+      "every": 9,
+      "until": 100,
+      "particle": "LAVA",
+      "count": 1,
+      "offsetX": 0.4,
+      "offsetY": 0.3,
+      "offsetZ": 0.4,
+      "speed": 0.0,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 26,
+      "every": 4,
+      "until": 100,
+      "particle": "SMOKE",
+      "count": 2,
+      "offsetX": 0.3,
+      "offsetY": 0.4,
+      "offsetZ": 0.3,
+      "speed": 0.01,
+      "height": 0.1
+    },
+    {
+      "type": "SOUND",
+      "tick": 24,
+      "every": 22,
+      "until": 100,
+      "sound": "minecraft:block.fire.ambient",
+      "volume": 0.8,
+      "pitch": 1.0
+    },
+    {
+      "type": "SOUND",
+      "tick": 34,
+      "every": 17,
+      "until": 100,
+      "sound": "minecraft:block.lava.pop",
+      "volume": 0.5,
+      "pitch": 1.0
+    },
+    {
+      "type": "TEXT",
+      "tick": 50,
+      "every": 0,
+      "until": 0,
+      "line": 0,
+      "text": "&e&l\u00bb &6&lSCORCHING &e&l\u00ab"
+    },
+    {
+      "type": "SOUND",
+      "tick": 50,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.firework_rocket.blast",
+      "volume": 0.4,
+      "pitch": 0.7
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 50,
+      "every": 0,
+      "until": 0,
+      "particle": "FLAME",
+      "count": 20,
+      "offsetX": 0.1,
+      "offsetY": 0.1,
+      "offsetZ": 0.1,
+      "speed": 0.12,
+      "height": 0.0
+    },
+    {
+      "type": "TEXT",
+      "tick": 78,
+      "every": 0,
+      "until": 0,
+      "line": 0,
+      "text": "&f&l\u00bb &e&lINFERNO &f&l\u00ab"
+    },
+    {
+      "type": "SOUND",
+      "tick": 78,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:entity.firework_rocket.blast",
+      "volume": 0.5,
+      "pitch": 0.5
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 78,
+      "every": 0,
+      "until": 0,
+      "particle": "FLAME",
+      "count": 30,
+      "offsetX": 0.1,
+      "offsetY": 0.1,
+      "offsetZ": 0.1,
+      "speed": 0.18,
+      "height": 0.0
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 78,
+      "every": 0,
+      "until": 0,
+      "particle": "LAVA",
+      "count": 15,
+      "offsetX": 0.4,
+      "offsetY": 0.3,
+      "offsetZ": 0.4,
+      "speed": 0.0,
+      "height": 0.0
+    },
+    {
+      "type": "MESSAGE",
+      "tick": 16,
+      "every": 0,
+      "until": 0,
+      "message": "&6&l\u00bb &7The &f%item_name%&7 erupts in flames!"
+    },
+    {
+      "type": "PARTICLE",
+      "tick": 110,
+      "every": 0,
+      "until": 0,
+      "particle": "LARGE_SMOKE",
+      "count": 25,
+      "offsetX": 0.3,
+      "offsetY": 0.3,
+      "offsetZ": 0.3,
+      "speed": 0.05,
+      "height": 0.0
+    },
+    {
+      "type": "SOUND",
+      "tick": 108,
+      "every": 0,
+      "until": 0,
+      "sound": "minecraft:block.lava.extinguish",
+      "volume": 0.8,
+      "pitch": 0.9
+    }
+  ]
+}
